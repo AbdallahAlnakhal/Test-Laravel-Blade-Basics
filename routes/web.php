@@ -22,6 +22,6 @@ Route::get('/table', [HomeController::class, 'table'])->name('table');
 Route::get('/rows', [HomeController::class, 'rows'])->name('rows');
 Route::view('/authenticated', 'authenticated')->name('authenticated');
 Route::get('/include', [HomeController::class, 'include'])->name('include');
-Route::view('/layout', 'layout')->name('layout');
-
-require __DIR__.'/auth.php';
+Route::get('/layout', function () {
+    return view('layout');
+})->name('layout');require __DIR__.'/auth.php';

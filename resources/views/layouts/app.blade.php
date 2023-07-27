@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        {{-- Task: edit one file to pass $metaTitle as "Blade Test" to all views --}}
         <title>{{ $metaTitle ?? 'Laravel' }}</title>
-
+        <title>{{ $metaTitle ?? 'Blade Test' }}</title>
+        {{-- Task: edit one file to pass $metaTitle as "Blade Test" to all views --}}
+        <title>{{ $metaTitle ?? 'Blade Test' }}</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -17,9 +17,10 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
+    @include('layouts.navigation')
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+
 
             <!-- Page Heading -->
             <header class="bg-white shadow">

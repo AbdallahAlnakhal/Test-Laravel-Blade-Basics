@@ -65,7 +65,11 @@ class ViewsTest extends TestCase
     {
         $response = $this->get('/');
         $response->assertSee('Blade Test');
+        $metaTitle = 'Your Page Title';
+
+    return view('layouts.app', compact('metaTitle'));
     }
+
 
     public function test_layout()
     {
